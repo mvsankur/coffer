@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.asmobisoft.coffer"
+    android:versionCode="2"
+    android:versionName="1.01">
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <screen
+        android:screenDensity="480"
+        android:screenSize="normal" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".activity.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name="com.asmobisoft.coffer.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.asmobisoft.coffer.registration.LoginActivity"
+            android:label="@string/login"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.asmobisoft.coffer.registration.SignupActivity"
+            android:label="@string/Signup"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".MainActivity1"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name="com.asmobisoft.coffer.registration.ForgotPasswordActivity"
+            android:label="@string/forgot"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <!--  <activity
+                android:name="com.asmobisoft.coffer.activity.RechargeActivity"
+                android:label="@string/recharge"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden" />-->
+
+        <activity android:name="com.asmobisoft.coffer.activity.RechargeActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+        <activity android:name="com.asmobisoft.coffer.activity.ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+        <activity
+            android:name="com.asmobisoft.coffer.activity.MoneyTransferActivity"
+            android:theme="@style/MyTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+
+        <activity
+            android:name="com.asmobisoft.coffer.activity.MobileRechargeActivity"
+            android:theme="@style/MyTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+        <activity
+            android:name="com.asmobisoft.coffer.activity.WalletActivity"
+            android:theme="@style/MyTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+
+
+    </application>
+</manifest>
